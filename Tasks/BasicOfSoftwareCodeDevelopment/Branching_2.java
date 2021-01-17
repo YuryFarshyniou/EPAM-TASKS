@@ -26,7 +26,7 @@ public class Branching_2 {
         } else if (min2 > min1) {
             System.out.println("max = min2 :  " + min2);
         } else {
-            System.out.println("these are equals");
+            System.out.println("These are equals");
         }
 
     }
