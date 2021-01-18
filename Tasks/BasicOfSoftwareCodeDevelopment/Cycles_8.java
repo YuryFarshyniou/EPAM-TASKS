@@ -11,20 +11,21 @@ public class Cycles_8 {
         int[] arr = new int[10];
         System.out.println("Enter the  first number ");
 
-        int a = sc.nextInt();
-        while (a != 0) {
-            arr[a % 10]++;
+        int firstNumber = sc.nextInt();
+        while (firstNumber != 0) {
+            arr[firstNumber % 10]++;
 
-            a /= 10;
+            firstNumber /= 10;
         }
 
+
         System.out.println("Enter the  second number: ");
-        int b = sc.nextInt();
-        while (b != 0) {
-            if (arr[b % 10] != 0) {
-                System.out.println(b % 10);
+        int secondNumber = sc.nextInt();
+        while (secondNumber != 0) {
+            if (arr[secondNumber % 10] != 0) {
+                System.out.println(secondNumber % 10);
             }
-            b /= 10;
+            secondNumber /= 10;
         }
     }
 }

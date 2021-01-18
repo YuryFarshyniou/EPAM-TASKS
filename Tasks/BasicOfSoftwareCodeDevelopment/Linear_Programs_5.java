@@ -10,14 +10,15 @@ public class Linear_Programs_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter equil of seconds");
-        int y = sc.nextInt();
+        int amountOfSec = sc.nextInt();
 
-        int z = y / 3600;
+        int sec = amountOfSec % 60;
+        int min = (amountOfSec - sec) / 60;
+        int m = min % 60;
+        int hour = (min - m) / 60;
 
-        int x = (y - (z * 3600)) / 60;
 
-        int a = y - (z * 3600 + x * 60);
-        System.out.println(z + " h " + x + " min " + a + " c ");
+        System.out.println(hour + " h " + m + " min " + sec + " c ");
 
     }
 

@@ -10,6 +10,7 @@ public class Linear_Programs_4 {
         double y = (x * 1000) % 1000 + (int) x / 1000.0;
         System.out.println(y);
 
+
     }
 
 }

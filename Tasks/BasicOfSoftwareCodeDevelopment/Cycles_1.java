@@ -10,12 +10,12 @@ public class Cycles_1 {
         Scanner x = new Scanner(System.in);
         System.out.println("Enter a number: ");
         int sum = 0;
-        int a = x.nextInt();
-        if (a <= 0) {
+        int positiveNumber = x.nextInt();
+        if (positiveNumber <= 0) {
             System.out.println("Enter another number!!!");
 
         } else {
-            for (int i = 0; i < a; i++) {
+            for (int i = 0; i < positiveNumber; i++) {
 
                 sum += i;
 
