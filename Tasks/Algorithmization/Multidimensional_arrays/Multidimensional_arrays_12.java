@@ -3,10 +3,10 @@ package Algorithmization.Multidimensional_arrays;
 //Отсортировать строки матрицы по возростанию и убыванию значений элементов.
 
 
-
 public class Multidimensional_arrays_12 {
     public static void main(String[] args) {
-        int[][] arr = {{1, 221, 32}, {5, 23, 43, 1,45,1234}, {78, 12, 10, 33}};
+        int[][] arr = {{1, 221, 32}, {5, 23, 43, 1, 45, 1234}, {78, 12, 10, 33}};
+
         System.out.println("Our array : ");
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {

@@ -4,57 +4,68 @@ package Algorithmization.Multidimensional_arrays;
 
 public class Multidimensional_arrays_13 {
     public static void main(String[] args) {
-        int[][] arr = {{38, 45, 298, 7}, {41, 2, 78}, {25, 67, 31, 5}};
+        int[][] arr = {{38, 45, 298, 67}, {41, 2, 78, 7, 89}, {25, 67, 31, 78, 6}, {1, 25, 19, 23, 9, 67}, {12, 44, 21, 5},{56,21}};
         System.out.println("Our array: ");
+        printArray(arr);
+
+
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println(" ");
-        }
 
+                int value = arr[i][j];
+                int f = i - 1;
+                for (; f >= 0; f--) {
 
-        int lengthOfColumns = 0;
-        int n = 0;
-        boolean needIteration = true;
-        while (needIteration) {
-            needIteration = false;
-            for (int i = 1; i < arr.length; i++) {
+                    if (j <= arr[f].length - 1 && value < arr[f][j]) {
+                        arr[f + 1][j] = arr[f][j];
+                    } else {
+                        break;
 
-                for (int j = 0; j < arr[i].length; j++) {
-
-                    lengthOfColumns = arr[i].length;
-                    if (n == j) {
-                        if (arr[i].length < arr[i - 1].length) {
-
-                        } else {
-                            if (arr[i][j] < arr[i - 1][j]) {
-                                int temp = arr[i][j];
-                                arr[i][j] = arr[i - 1][j];
-                                arr[i - 1][j] = temp;
-                                needIteration = true;
-                            }
-                        }
                     }
                 }
 
-                if (!needIteration && n >= lengthOfColumns) {
-                    break;
-                } else if (!needIteration) {
-                    n++;
-                    needIteration = true;
-                }
+                arr[f + 1][j] = value;
+
             }
         }
 
 
         System.out.println("Our array sorted in ascending order: ");
+        printArray(arr);
+
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
+
+                int value = arr[i][j];
+                int f = i - 1;
+                for (; f >= 0; f--) {
+
+                    if (j <= arr[f].length - 1 && value > arr[f][j]) {
+                        arr[f + 1][j] = arr[f][j];
+                    } else {
+                        break;
+
+                    }
+                }
+
+                arr[f + 1][j] = value;
+
+            }
+        }
+
+        System.out.println("Our array is sorted in descending order: ");
+        printArray(arr);
+
+
+    }
+
+
+    static void printArray(int[][] array) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
             }
             System.out.println(" ");
         }
-
     }
 }
