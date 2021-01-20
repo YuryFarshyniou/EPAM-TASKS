@@ -11,21 +11,16 @@ public class Multidimensional_arrays_13 {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-
                 int value = arr[i][j];
                 int f = i - 1;
                 for (; f >= 0; f--) {
-
                     if (j <= arr[f].length - 1 && value < arr[f][j]) {
                         arr[f + 1][j] = arr[f][j];
                     } else {
                         break;
-
                     }
                 }
-
                 arr[f + 1][j] = value;
-
             }
         }
 
