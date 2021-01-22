@@ -16,7 +16,6 @@ public class Multidimensional_arrays_11 {
                     count++;
                 }
             }
-
             System.out.println(" ");
             if (count > 3) {
                 array[i] = i;
@@ -25,6 +24,5 @@ public class Multidimensional_arrays_11 {
         for (int n : array) {
             if (n != 0) System.out.println("The line number with 5 more then three times  is : " + n);
         }
-
     }
 }

@@ -27,7 +27,7 @@ public class Multidimensional_arrays_15 {
 
             }
         }
-        System.out.println("Count is :" + count);
+        System.out.println("Largest number is :" + count);
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {

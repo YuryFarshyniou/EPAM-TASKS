@@ -15,7 +15,6 @@ public class Multidimensional_arrays_12 {
             System.out.println(" ");
         }
 
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 int value = arr[i][j];
@@ -40,7 +39,6 @@ public class Multidimensional_arrays_12 {
             System.out.println(" ");
         }
 
-
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 int value = arr[i][j];
@@ -51,13 +49,10 @@ public class Multidimensional_arrays_12 {
                     } else {
                         break;
                     }
-
                 }
                 arr[i][s + 1] = value;
             }
-
         }
-
 
         System.out.println("Our array sorted in descending order: ");
         for (int i = 0; i < arr.length; i++) {
@@ -66,7 +61,5 @@ public class Multidimensional_arrays_12 {
             }
             System.out.println(" ");
         }
-
-
     }
 }

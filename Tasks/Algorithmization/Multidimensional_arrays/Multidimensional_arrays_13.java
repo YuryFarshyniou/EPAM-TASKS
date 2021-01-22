@@ -24,7 +24,6 @@ public class Multidimensional_arrays_13 {
             }
         }
 
-
         System.out.println("Our array sorted in ascending order: ");
         printArray(arr);
 
@@ -39,19 +38,13 @@ public class Multidimensional_arrays_13 {
                         arr[f + 1][j] = arr[f][j];
                     } else {
                         break;
-
                     }
                 }
-
                 arr[f + 1][j] = value;
-
             }
         }
-
         System.out.println("Our array is sorted in descending order: ");
         printArray(arr);
-
-
     }
 
 
