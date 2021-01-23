@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 
 /* Дана последовательность целых чисел a1,a2,...,an.Образовать новую последовательность,
  выбросив их исходной те члены,которые равны min(a1,a2,...,an); */

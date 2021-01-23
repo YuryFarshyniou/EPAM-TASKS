@@ -1,9 +1,9 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 /* Матрицу 10*20 заполнить случайными числами от 0 до 15.Вывести на экран саму матрицу
 и номера строк,в которых число 5 встречается три и более раз. */
 
-public class Multidimensional_arrays_11 {
+public class MultidimensionalАrrays_11 {
     public static void main(String[] args) {
         int[][] arr = new int[10][20];
         int[] array = new int[10];

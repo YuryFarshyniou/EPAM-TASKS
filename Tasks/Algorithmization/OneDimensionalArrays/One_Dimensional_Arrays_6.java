@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 
 // Задана последовательность N вещественных чисел.Вычислить сумму чисел,порядковые номера которых являются простыми числами.
 

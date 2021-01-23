@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 
 // ДАны действительные числа а1,а2...аn.Поменять местами наибольший и наименьший элементы.
 

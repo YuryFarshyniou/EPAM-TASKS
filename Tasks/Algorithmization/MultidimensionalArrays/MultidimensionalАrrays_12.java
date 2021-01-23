@@ -1,9 +1,9 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 //Отсортировать строки матрицы по возростанию и убыванию значений элементов.
 
 
-public class Multidimensional_arrays_12 {
+public class MultidimensionalАrrays_12 {
     public static void main(String[] args) {
         int[][] arr = {{1, 221, 32}, {5, 23, 43, 1, 45, 1234}, {78, 12, 10, 33}};
 

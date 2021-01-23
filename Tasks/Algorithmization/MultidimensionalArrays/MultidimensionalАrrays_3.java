@@ -1,11 +1,11 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 // Дана матрица.Вывести k-ю строку и р-й столбец матрицы.
 
 import java.io.*;
 
 
-public class Multidimensional_arrays_3 {
+public class MultidimensionalАrrays_3 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int lineNumber = Integer.parseInt(reader.readLine());

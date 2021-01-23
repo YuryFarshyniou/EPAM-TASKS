@@ -1,4 +1,4 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 /* Сформировать случайную матрицу m x n , состоящую из нулей и единиц,
 причем в каждом столбце число единиц равно номеру столбца.  */
@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Multidimensional_arrays_14 {
+public class MultidimensionalАrrays_14 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the number of lines: ");

@@ -1,8 +1,8 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 // Найти наибольший элемент матрицы и заменить все нечетные элементы на него
 
-public class Multidimensional_arrays_15 {
+public class MultidimensionalАrrays_15 {
     public static void main(String[] args) {
         int[][] arr = {{1, 2,}, {5, 6, 7, 8}, {12, 13, 14, 15, 6, 456, 4, 312}, {22, 23, 24, 25}};
         System.out.println("Our array: ");

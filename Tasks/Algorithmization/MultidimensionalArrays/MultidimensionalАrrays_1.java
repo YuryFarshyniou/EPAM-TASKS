@@ -1,10 +1,10 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 //Дана матрица . Вывести на экран все нечетные столбцы,у которых первый элемент больше последнего.
 
 import java.util.Arrays;
 
 
-public class Multidimensional_arrays_1 {
+public class MultidimensionalАrrays_1 {
     public static void main(String[] args) {
         int[][] arr = {{156, 242, 3, 4,},
                        {67, 6, 7, 3},

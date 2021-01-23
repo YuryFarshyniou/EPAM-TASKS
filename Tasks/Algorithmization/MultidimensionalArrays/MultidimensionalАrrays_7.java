@@ -1,4 +1,4 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 /* Сформировать квадратную матрицу порядка N по правилу :
 A[i, j]=sin((i 2 -j 2 )/N) и подсчитать количество положительных элементов в ней.
@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Multidimensional_arrays_7 {
+public class MultidimensionalАrrays_7 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the number of lines : ");

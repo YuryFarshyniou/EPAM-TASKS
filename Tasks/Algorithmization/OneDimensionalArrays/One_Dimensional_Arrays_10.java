@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 /* Дан целочисленный массив с количеством элементов n.Сжать массив,выбросив из него каждый второй элемент
 (освоьодившийся элемент заполнить нулями)Примечание: Дополнительный массив не использовать. */
 

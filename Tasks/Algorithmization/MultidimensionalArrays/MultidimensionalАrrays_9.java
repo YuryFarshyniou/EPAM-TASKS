@@ -1,10 +1,10 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 /* Задана матрица неотрицательных чисел.Посчитать сумму элементов в каждом столбце.
 Определить,какой столбец содержит максимальную сумму.
  */
 
-public class Multidimensional_arrays_9 {
+public class MultidimensionalАrrays_9 {
     public static void main(String[] args) {
         int[][] arr = {{1, 2}, {5, 3, 2, 67}, {23, 14, 55, 48,89}};
 

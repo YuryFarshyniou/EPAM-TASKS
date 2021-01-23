@@ -1,8 +1,8 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 // Дана квадратная матрица.Вывести на экран элементы,стоящие по диагонали.
 
-public class Multidimensional_arrays_2 {
+public class MultidimensionalАrrays_2 {
     public static void main(String[] args) {
 int [] [] arr = {{1,2,3,4},
                  {5,6,7,8,},

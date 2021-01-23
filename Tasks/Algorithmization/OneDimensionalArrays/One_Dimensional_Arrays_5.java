@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 
 // Даны целые числа a1, a2..aN.Вывести на печать только те числа,для которых ai>i.
 

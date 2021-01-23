@@ -1,4 +1,4 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 /* В числовой матрице поменять местами два столбца,т.е. все элементы одного столбца поставить на соответствующие
 им позиции другого, а его элементы второго переместить в первый.Номера столбцов вводит пользователь с клавиатуры.
@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Multidimensional_arrays_8 {
+public class MultidimensionalАrrays_8 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

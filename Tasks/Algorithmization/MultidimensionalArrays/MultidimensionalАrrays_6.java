@@ -1,8 +1,8 @@
-package Algorithmization.Multidimensional_arrays;
+package Algorithmization.MultidimensionalArrays;
 
 // Сформировать квадратную матрицу порядка n по заданному образцу(n - четное).
 
-public class Multidimensional_arrays_6 {
+public class MultidimensionalАrrays_6 {
     public static void main(String[] args) {
 int [] [] arr = {{1,1,1,1,1,1,1,1},{0,1,1,1,1,1,1,0},{0,0,1,1,1,1,0,0},{0,0,0,1,1,0,0,0},{0,0,0,1,1,0,0,0},{0,0,1,1,1,1,0,0,},{0,1,1,1,1,1,1,0},{1,1,1,1,1,1,1,1}};
         System.out.println("Our array: ");

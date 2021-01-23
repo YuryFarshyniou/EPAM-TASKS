@@ -1,4 +1,4 @@
-package Algorithmization.One_Dimensional_Arrays;
+package Algorithmization.OneDimensionalArrays;
 
 // В массив А[N] занесены натуральные числа.Найти сумму тех элементов,которые кратны данному K.
 
