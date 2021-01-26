@@ -11,19 +11,20 @@ import java.io.InputStreamReader;
 public class MultidimensionalАrrays_7 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the number of lines : ");
-
-        int lineNumber = Integer.parseInt(reader.readLine());
-        int count = 0;
-        float[][] arr = new float[lineNumber][lineNumber];
+        System.out.println("Enter the number: ");
+        int n = Integer.parseInt(reader.readLine());
+        int positiveNumbers = 0;
+       double[][] arr = new double[n][n];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                arr[i][j] = (float) Math.sin((Math.pow(i, 2) - Math.pow(j, 2)) / lineNumber);
-                System.out.print(arr[i][j] + " ");
-                if (arr[i][j] > 0) count++;
+                arr[i][j] =  Math.sin((Math.pow(i, 2) - Math.pow(j, 2)) / n);
+                System.out.printf("%.2f",arr[i][j] );
+                System.out.print(" ");
+                if (arr[i][j] > 0) positiveNumbers++;
             }
             System.out.println(" ");
         }
-        System.out.println("The number of positive numbers is : " + count);
+        System.out.println("The amount of positive numbers: " + positiveNumbers);
+        System.out.println();
     }
 }

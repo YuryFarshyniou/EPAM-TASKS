@@ -1,7 +1,7 @@
 package algorithmization.decomposition;
 
 /* Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего общего
-кратного двух натуральных чисел.
+кратного двух натуральных чисел.  NOK(a,b)=(a*b)/NOD(a,b);
  */
 
 import java.io.BufferedReader;
@@ -16,6 +16,7 @@ public class Decomposition_1 {
         System.out.println("Enter the second number: ");
         int secondNumber = Integer.parseInt(reader.readLine());
         System.out.println("The nod is: " + nod(firstNumber, secondNumber));
+        System.out.println("The nok is: " + nok(firstNumber, secondNumber));
     }
 
 
@@ -32,5 +33,10 @@ public class Decomposition_1 {
             }
         }
         return nod;
+    }
+
+    static int nok(int firstNumber, int secondNumber) {
+        int nok = (firstNumber * secondNumber) / nod(firstNumber, secondNumber);
+        return nok;
     }
 }

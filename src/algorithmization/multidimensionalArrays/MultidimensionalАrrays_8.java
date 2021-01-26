@@ -12,7 +12,7 @@ public class MultidimensionalАrrays_8 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int[][] array = {{1, 2, 3, -4}, {6, 4, 12}, {7, 5, 67, 28}};
+        int[][] array = {{1, 2, 3, -4,6,1,15}, {6, 4, 12}, {7, 5, 67, 28,2}};
         System.out.println("Our array: ");
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
