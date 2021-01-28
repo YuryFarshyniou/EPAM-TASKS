@@ -22,8 +22,7 @@ public class Decomposition_1 {
 
     static int nod(int firstNumber, int secondNumber) {
         int nod = 0;
-        int biggest = (firstNumber > secondNumber) ? firstNumber : secondNumber;
-        int count = biggest;
+        int count = (firstNumber > secondNumber) ? firstNumber : secondNumber;
         while (count > 0) {
             if (firstNumber % count == 0 && secondNumber % count == 0) {
                 nod = count;
@@ -36,7 +35,7 @@ public class Decomposition_1 {
     }
 
     static int nok(int firstNumber, int secondNumber) {
-        int nok = (firstNumber * secondNumber) / nod(firstNumber, secondNumber);
-        return nok;
+
+        return (firstNumber * secondNumber) / nod(firstNumber, secondNumber);
     }
 }

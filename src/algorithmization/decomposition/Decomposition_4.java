@@ -12,24 +12,24 @@ import java.util.Arrays;
 public class Decomposition_4 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the amount of dots: ");
+        System.out.println("Enter the amount of points: ");
         int n = Integer.parseInt(reader.readLine());
         int[][] dots = new int[n][2];
         for (int i = 0; i < dots.length; i++) {
-            System.out.println("Enter the value of " + (i + 1) + " pair of dots: ");
+            System.out.println("Enter the value of " + (i + 1) + " pair of points: ");
             for (int j = 0; j < dots[i].length; j++) {
                 dots[i][j] = Integer.parseInt(reader.readLine());
             }
         }
-        System.out.println(Arrays.deepToString(dots));
+        System.out.println("Our points: " + Arrays.deepToString(dots));
         maxDistance(dots);
     }
 
 
     static void maxDistance(int[][] array) {
         double maxDistance = 0;
-        int dotOne = 0;
-        int dotTwo = 0;
+        int pointOne = 0;
+        int pointTwo = 0;
         int count = 0;
         while (count < array.length - 1) {
             for (int i = count + 1; i < array.length; i++) {
@@ -38,14 +38,14 @@ public class Decomposition_4 {
                 double distance = Math.sqrt(firstOperation + secondOperation);
                 if (distance > maxDistance) {
                     maxDistance = distance;
-                    dotOne = count;
-                    dotTwo = i;
+                    pointOne = count;
+                    pointTwo = i;
                 }
             }
             count++;
         }
         System.out.print("The max distance is: ");
         System.out.printf("%.2f", maxDistance);
-        System.out.print(" between " + (dotOne + 1) + " dot " + " and " + (dotTwo + 1) + " dot");
+        System.out.print(" between " + (pointOne + 1) + " point " + " and " + (pointTwo + 1) + " point");
     }
 }
