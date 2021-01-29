@@ -1,14 +1,14 @@
 package basicOfSoftwareCodeDevelopment;
+
 /* Вычислить значения функции на отрезке [a,b] с шагом  h:
    {x,x>2;
 y ={
    {-x,x<=2;
  */
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Cycles_2 {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int y;
@@ -26,9 +26,6 @@ public class Cycles_2 {
                 y = i * (-1);
             }
             System.out.println("for x = " + i + " y = " + y);
-
-
         }
-
     }
 }

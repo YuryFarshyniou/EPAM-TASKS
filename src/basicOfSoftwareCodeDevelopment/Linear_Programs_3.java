@@ -1,7 +1,9 @@
 package basicOfSoftwareCodeDevelopment;
-// Вычислить значение выражения по формуле(все переменные принимают действительные значения) : ( (sin x + cos y) /(cos x - sin y)) * tg xy;
 
-import java.util.*;
+/* Вычислить значение выражения по формуле(все переменные принимают действительные значения):
+ ((sin x + cos y) / (cos x - sin y)) * tg xy; */
+
+import java.util.Scanner;
 
 public class Linear_Programs_3 {
 
@@ -13,7 +15,5 @@ public class Linear_Programs_3 {
         double y = sc.nextDouble();
         double z = ((Math.sin(x) + Math.cos(y)) / (Math.cos(x) + Math.sin(y))) * Math.tan(x * y);
         System.out.println("Your answer is : " + z);
-
     }
-
 }

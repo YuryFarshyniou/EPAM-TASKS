@@ -1,10 +1,11 @@
 package basicOfSoftwareCodeDevelopment;
-// Даны три точки A(x1, y1), B(x2, y2), C(x3, y3). Определить,будут ли они расположенны на одной прямой.
 
-import java.util.*;
+/* Даны три точки A(x1, y1), B(x2, y2), C(x3, y3).
+ Определить,будут ли они расположенны на одной прямой.*/
+
+import java.util.Scanner;
 
 public class Branching_3 {
-
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in);
         System.out.println("Enter x1: ");
@@ -24,8 +25,5 @@ public class Branching_3 {
         } else {
             System.out.println("Don't lie on one straight line");
         }
-
-
     }
-
 }

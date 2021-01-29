@@ -1,37 +1,28 @@
 package basicOfSoftwareCodeDevelopment;
 
-import java.util.*;
 /* Даны два треугольника (в градусах).Определить,существует ли такой треугольник,
-и если да, то будет ли он прямоугольным.
- */
+и если да, то будет ли он прямоугольным. */
+
+import java.util.Scanner;
 
 public class Branching_1 {
-
     public static void main(String[] args) {
-
-
-        Scanner firstC = new Scanner(System.in);
-        Scanner secondC = new Scanner(System.in);
-        Scanner thirdC = new Scanner(System.in);
-        System.out.println("Enter firstCorner : ");
-        int firstCorner = firstC.nextInt();
-        System.out.println("Enter secondCorner : ");
-        int secondCorner = secondC.nextInt();
-        System.out.println("Enter thirdCorner : ");
-        int thirdCorner = thirdC.nextInt();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first Corner: ");
+        int firstCorner = sc.nextInt();
+        System.out.println("Enter the second Corner: ");
+        int secondCorner = sc.nextInt();
+        System.out.println("Enter the third Corner: ");
+        int thirdCorner = sc.nextInt();
         if (firstCorner + secondCorner + thirdCorner == 180) {
-            System.out.println("Yes , this triangle exists and ");
+            System.out.print("Yes, this triangle exists and ");
             if (firstCorner + secondCorner == 90) {
                 System.out.println("its a right triangle");
             } else {
-                System.out.println("This is is usually triangle");
+                System.out.println(" its an usually triangle");
             }
-
         } else {
             System.out.println("This triangle isn't exists");
         }
-
-
     }
-
 }

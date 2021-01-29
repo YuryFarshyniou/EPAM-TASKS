@@ -1,11 +1,11 @@
 package algorithmization.oneDimensionalArrays;
+
 /* Дан массив действительных чисел,размерность которого N.
  Подсчитать,сколько в нем отрицательных,положительных и нулевых элементов. */
 
-import java.util.*;
+import java.util.Scanner;
 
 public class One_Dimensional_Arrays_3 {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int neg = 0;
@@ -20,13 +20,9 @@ public class One_Dimensional_Arrays_3 {
             } else {
                 zer += 1;
             }
-
         }
         System.out.println("Number of negative numbers: " + neg);
         System.out.println("Number of positive numbers: " + pos);
-        System.out.println("Number of zeros " + zer);
-
-
+        System.out.println("Number of zeros: " + zer);
     }
-
 }

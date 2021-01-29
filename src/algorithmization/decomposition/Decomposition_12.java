@@ -17,27 +17,6 @@ public class Decomposition_12 {
         int n = Integer.parseInt(reader.readLine());
         System.out.println(Arrays.toString(newArray(k, n)));
     }
-// Передаем элементы в массив.
-
-    static int[] newArray(int k, int n) {
-        int[] array = new int[arrayLength(k, n)];
-        int sum = 0;
-        int temp = n;
-        int count = 0;
-
-        while (sum != k) {
-            if (sum > k) {
-                sum -= temp;
-                temp--;
-                count--;
-            }
-            array[count] = temp;
-            sum += temp;
-            count++;
-        }
-        return array;
-    }
-
 
     // Определяем длину массива.
 
@@ -56,5 +35,26 @@ public class Decomposition_12 {
             count++;
         }
         return count;
+    }
+
+    // Передаем элементы в массив.
+
+    static int[] newArray(int k, int n) {
+        int[] array = new int[arrayLength(k, n)];
+        int sum = 0;
+        int temp = n;
+        int count = 0;
+
+        while (sum != k) {
+            if (sum > k) {
+                sum -= temp;
+                temp--;
+                count--;
+            }
+            array[count] = temp;
+            sum += temp;
+            count++;
+        }
+        return array;
     }
 }
