@@ -3,7 +3,7 @@ package algorithmization.multidimensionalArrays;
 //Отсортировать строки матрицы по возростанию и убыванию значений элементов.
 
 
-public class MultidimensionalАrrays_12 {
+public class MultidimensionalArrays_12 {
     public static void main(String[] args) {
         int[][] arr = {{1, 221, 32}, {5, 23, 43, 1, 45, 1234}, {78, 12, 10, 33}};
 
@@ -14,6 +14,8 @@ public class MultidimensionalАrrays_12 {
             }
             System.out.println(" ");
         }
+
+        // Сортируем по возрастанию.
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -38,6 +40,8 @@ public class MultidimensionalАrrays_12 {
             }
             System.out.println(" ");
         }
+
+        // Сортируем по убыванию.
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {

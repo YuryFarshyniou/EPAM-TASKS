@@ -22,7 +22,7 @@ public class Decomposition_17 {
             int sum = 0;
             char[] arr = String.valueOf(n).toCharArray();
             for (char i : arr) {
-                if (i == '-' ) continue;
+                if (i == '-') continue;
                 sum += Integer.parseInt(String.valueOf(i));
             }
             if (n < 0) {

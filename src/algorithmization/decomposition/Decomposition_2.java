@@ -21,7 +21,7 @@ public class Decomposition_2 {
         System.out.println("The NOD is: " + nod(array));
 
     }
-           // Выводит наши числа
+    // Выводит наши числа
 
     static void showArray(int[] array) {
         for (int number : array) {

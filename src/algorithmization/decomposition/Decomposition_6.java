@@ -19,6 +19,7 @@ public class Decomposition_6 {
         coPrimeNumbers(numbers);
     }
 
+    // Являются ли наши числа взаимно простыми.
 
     static void coPrimeNumbers(int[] array) {
         boolean isSimple = true;

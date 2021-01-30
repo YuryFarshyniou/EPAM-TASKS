@@ -17,7 +17,7 @@ public class Decomposition_10 {
     }
 
 
-// Создаем массив
+    // Создаем массив
 
     static int[] arrayOfDigits(int n) {
         String number = Integer.toString(n);

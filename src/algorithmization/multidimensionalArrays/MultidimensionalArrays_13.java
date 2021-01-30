@@ -2,12 +2,13 @@ package algorithmization.multidimensionalArrays;
 
 // Отсортировать столбцы матрицы по возрастанию и убыванию значений элементов
 
-public class MultidimensionalАrrays_13 {
+public class MultidimensionalArrays_13 {
     public static void main(String[] args) {
-        int[][] arr = {{38, 45, 298, 67}, {41, 2, 78, 7, 89}, {25, 67, 31, 78, 6}, {1, 25, 19, 23, 9, 67}, {12, 44, 21, 5},{56,21}};
+        int[][] arr = {{38, 45, 298, 67}, {41, 2, 78, 7, 89}, {25, 67, 31, 78, 6}, {1, 25, 19, 23, 9, 67}, {12, 44, 21, 5}, {56, 21}};
         System.out.println("Our array: ");
         printArray(arr);
 
+        // Сортируем по возрастанию.
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
@@ -26,6 +27,8 @@ public class MultidimensionalАrrays_13 {
 
         System.out.println("Our array sorted in ascending order: ");
         printArray(arr);
+
+        // Сортируем по убыванию.
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {

@@ -12,6 +12,9 @@ import java.util.Arrays;
 public class Decomposition_4 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        // Выводим точки
+
         System.out.println("Enter the amount of points: ");
         int n = Integer.parseInt(reader.readLine());
         int[][] dots = new int[n][2];
@@ -25,6 +28,7 @@ public class Decomposition_4 {
         maxDistance(dots);
     }
 
+    // Определяем наибольше ресстояние
 
     static void maxDistance(int[][] array) {
         double maxDistance = 0;

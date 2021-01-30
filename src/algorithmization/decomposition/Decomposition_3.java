@@ -15,7 +15,7 @@ public class Decomposition_3 {
         double areaOfTriangle = areaOfTriangle(a);
         double areaOfHexagon = areaOfTriangle * 6;
         System.out.print("The area of a hexagon: ");
-        System.out.printf("%.2f",areaOfHexagon);
+        System.out.printf("%.2f", areaOfHexagon);
     }
 
 

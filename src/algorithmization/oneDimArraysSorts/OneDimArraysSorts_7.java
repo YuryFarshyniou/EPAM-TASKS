@@ -11,13 +11,19 @@ public class OneDimArraysSorts_7 {
     public static void main(String[] args) {
         int[] arr1 = {1, 3, 5, 7, 9, 9, 11, 13, 15, 17};
         System.out.println("Our first array: " + Arrays.toString(arr1));
-        int[] arr2 = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+        int[] arr2 = {2, 8, 15, 16, 20, 25};
         System.out.println("Our second array: " + Arrays.toString(arr2));
         int[] arr3 = new int[arr1.length + arr2.length];
         int[] arr4 = new int[arr1.length + arr2.length];
+
+        // Заносим элементы первого массива в третий массив.
+
         for (int i = 0; i < arr1.length; i++) {
             arr3[i] = arr1[i];
         }
+
+        // Определяем номер индекса для вставки элементов.
+
         int j = 0;
         while (j < arr2.length) {
             for (int i = 0; i < arr3.length; i++) {
@@ -39,6 +45,7 @@ public class OneDimArraysSorts_7 {
         }
         System.out.println("The new array is: " + Arrays.toString(arr3));
     }
+
 
     public static void swap(int[] array1, int[] array2, int index) {
         for (int i = index; i < array1.length; i++) {

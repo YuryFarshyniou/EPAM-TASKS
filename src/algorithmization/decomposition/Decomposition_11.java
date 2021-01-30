@@ -31,7 +31,7 @@ public class Decomposition_11 {
         char[] array = num.toCharArray();
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == '.') {
+            if (array[i] == '.' || array[i] == '-') {
                 continue;
             } else if (i == array.length - 1 && (array[array.length - 1] == '0')) {
                 count--;

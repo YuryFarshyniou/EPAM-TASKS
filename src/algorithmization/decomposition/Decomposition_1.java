@@ -19,6 +19,7 @@ public class Decomposition_1 {
         System.out.println("The nok is: " + nok(firstNumber, secondNumber));
     }
 
+    // Находим нок
 
     static int nod(int firstNumber, int secondNumber) {
         int nod = 0;
@@ -34,8 +35,9 @@ public class Decomposition_1 {
         return nod;
     }
 
-    static int nok(int firstNumber, int secondNumber) {
+    // Находим нод.
 
+    static int nok(int firstNumber, int secondNumber) {
         return (firstNumber * secondNumber) / nod(firstNumber, secondNumber);
     }
 }

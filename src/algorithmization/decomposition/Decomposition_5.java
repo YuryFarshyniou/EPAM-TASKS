@@ -27,6 +27,7 @@ public class Decomposition_5 {
         System.out.println("Before the max number: " + beforeMaxNumber(arr));
     }
 
+    // Находим второе по величине число.
 
     static int beforeMaxNumber(int[] array) {
         int max = Integer.MIN_VALUE;

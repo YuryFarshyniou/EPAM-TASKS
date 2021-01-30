@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class MultidimensionalАrrays_14 {
+public class MultidimensionalArrays_14 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the number of lines: ");
@@ -16,6 +16,7 @@ public class MultidimensionalАrrays_14 {
         int numberOfColumns = Integer.parseInt(reader.readLine());
         int[][] arr = new int[numberOfLines][numberOfColumns];
 
+        // Формируем матрицу
 
         int n = 1;
         int a = 0;
@@ -29,7 +30,6 @@ public class MultidimensionalАrrays_14 {
             n++;
             a++;
         }
-
 
         System.out.println("Our array: ");
 

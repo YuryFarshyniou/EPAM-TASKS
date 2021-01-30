@@ -11,9 +11,9 @@ import java.util.Arrays;
 public class Decomposition_12 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the first number: ");
+        System.out.println("Enter K: ");
         int k = Integer.parseInt(reader.readLine());
-        System.out.println("Enter the second number: ");
+        System.out.println("Enter N: ");
         int n = Integer.parseInt(reader.readLine());
         System.out.println(Arrays.toString(newArray(k, n)));
     }

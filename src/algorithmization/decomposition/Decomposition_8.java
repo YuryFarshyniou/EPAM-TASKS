@@ -25,22 +25,23 @@ public class Decomposition_8 {
         System.out.println("Our array: " + Arrays.toString(arr));
         System.out.println("Enter the index of array: ");
         int k = Integer.parseInt(reader.readLine());
-
-        if(k<0 || k>=arr.length){
+        if (k < 0 || k >= arr.length) {
             System.out.println("You enter wrong index.");
-        }else{
-            System.out.println("The sum is: " + sums(arr,k));
+        } else {
+            System.out.println("The sum is: " + sums(arr, k));
         }
     }
 
+    // Определяем сумму элементов
 
-    static int sums(int[] array,int firstIndex) {
-        int sum=0;
-        for (int i = firstIndex; i <firstIndex+3 ; i++) {
-            if(i==array.length){
+    static int sums(int[] array, int firstIndex) {
+        int sum = 0;
+        for (int i = firstIndex; i < firstIndex + 3; i++) {
+            if (i == array.length) {
                 break;
             }
-            sum+=array[i];
+            sum += array[i];
+            System.out.println("Our " + i + " number is: " + array[i]);
         }
         return sum;
     }

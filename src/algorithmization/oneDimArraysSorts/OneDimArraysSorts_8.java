@@ -7,8 +7,8 @@ import java.util.Arrays;
 
 public class OneDimArraysSorts_8 {
     public static void main(String[] args) {
-        int[] numerator = {4, 2, 1, 4, 1, 17,1};
-        int[] denominator = {5, 3, 5, 7, 3, 25,1};
+        int[] numerator = {4, 2, 1, 4, 1, 17, 1};
+        int[] denominator = {5, 3, 5, 7, 3, 25, 1};
         int[] digitArray = new int[denominator.length];
         int[] denominatorClone = Arrays.copyOf(denominator, denominator.length);
         findGeneralDigitsForNOK(denominator, digitArray);
