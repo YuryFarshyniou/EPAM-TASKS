@@ -2,22 +2,26 @@ package stringsAndBasicOfTextProcessing.workingWithStringCharArray;
 
 // Замените в строке все вхождения 'word' на 'letter'.
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class String_2 {
-    public static void main(String[] args) {
-        String s = "I have one word and this word greatest than any other word.";
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter any string with a word \"word\": ");
+        String anyString = reader.readLine();
 
 //        String regex = "word";
-//        String st = s.replaceAll(regex, "letter");
+//        String st = anyString.replaceAll(regex, "letter");
 //        System.out.println(st);
 
-        System.out.println("Our initial string: " + s);
-        char[] arr = s.toCharArray();
+        char[] arr = anyString.toCharArray();
         String initialString = "word";
         String finalString = "letter";
         int differenceLength = finalString.length() - initialString.length();
 
         // Определяем колличество вхождений 'word'.
-
 
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -31,12 +35,16 @@ public class String_2 {
         for (int i = 0; i < arr.length; i++) {
             arr2[i] = arr[i];
         }
-
         char[] arr3 = new char[arr.length + count * differenceLength];
+        replaceWord(arr, arr2, arr3, letter);
+        anyString = String.valueOf(arr2);
+        System.out.println("Our string with replacements: " + anyString);
+    }
+
+    // Заменяем строки.
+
+    static char[] replaceWord(char[] arr, char[] arr2, char[] arr3, char[] letter) {
         for (int i = 0; i < arr.length; i++) {
-
-            // Заменяем строки.
-
             if (arr2[i] == 'w' && arr2[i + 3] == 'd') {
                 int k = i;
                 while (k < arr2.length) {
@@ -56,7 +64,6 @@ public class String_2 {
                 }
             }
         }
-        s = String.valueOf(arr2);
-        System.out.println("Our string with replacements: " + s);
+        return arr2;
     }
 }
