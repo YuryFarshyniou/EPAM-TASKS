@@ -23,7 +23,7 @@ public class Runner {
                 "String concatenation is implemented through the StringBuilder(or StringBuffer) class and" +
                 "\nits append method. String conversions are implemented through the method toString,defined by Object and inherited by all classes in Java." +
                 "For additional information on string concatenation and conversion," + "\nsee Gosling, Joy, and Steele, The Java Language Specification." +
-                "\n  Unless otherwise noted, passing a null argument to a constructor or method in this class will cause a NullPointerException to be thrown."
+                "\n  Unless otherwise. noted, passing a null argument. to a constructor or method in this class will cause a NullPointerException to be thrown."
                 + "\n  A String represents a string in the UTF-16 format in which supplementary characters" +
                 "are represented by surrogate pairs (see the section Unicode Character Representations in the Character class for more information)." +
                 "\nIndex values refer to char code units," + "so a supplementary character uses two positions in a String." +

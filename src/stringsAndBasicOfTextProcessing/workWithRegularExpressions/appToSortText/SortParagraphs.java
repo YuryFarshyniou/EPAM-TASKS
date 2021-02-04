@@ -5,8 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SortParagraphs {
-    String anyString;
-    String newStr = "";
+
 
     void sortParByNumberOfSentence(String anyString) {
 
@@ -17,8 +16,10 @@ public class SortParagraphs {
         Matcher matcher = pattern.matcher(anyString);
         ArrayList<Integer> paragraphsIndex = new ArrayList<>();
         while (matcher.find()) {
-            paragraphsIndex.add(matcher.start() + 1);
+            paragraphsIndex.add(matcher.start()+1);
         }
+        System.out.println(paragraphsIndex);
+        System.out.println("The char is: " + anyStringCharArray[348]);
 
 
         //Заносим абзацы в список.
@@ -69,44 +70,18 @@ public class SortParagraphs {
                     paragraphs.remove(i + 1);
                 }
             }
-
-// Если n является последний элементом, то для него
-//            if (n == paragraphsIndex.size() - 1) {
-//
-//                Pattern pattern2 = Pattern.compile("\\w{2,}.\\.");
-//                Matcher matcher2 = pattern2.matcher(paragraphs.get(n));
-//                int count1 = 0;
-//                while (matcher2.find()) {
-//                    count++;
-//                }
-//                amountOfSentence.add(count);
-//
-//                for (int i = amountOfSentence.size() - 1; i > 0; i--) {
-//                    if (amountOfSentence.get(i) > amountOfSentence.get(i - 1)) {
-//
-//                        int temp = amountOfSentence.get(i);
-//                        amountOfSentence.add(i, amountOfSentence.get(i - 1));
-//                        amountOfSentence.add(i - 1, temp);
-//                        amountOfSentence.remove(i);
-//                        amountOfSentence.remove(i + 1);
-//
-//
-//                        String tempString = paragraphs.get(i);
-//                        paragraphs.add(i, paragraphs.get(i - 1));
-//                        paragraphs.add(i - 1, tempString);
-//                        paragraphs.remove(i);
-//                        paragraphs.remove(i + 1);
-//                    }
-//                }
-//            }
             n++;
         }
 
+        System.out.println("Our amount of sentence in each sorted paragraph: " + amountOfSentence);
+        String sortedString = "";
+
+        // Конкатенируем в отсортированную строку.
 
         for (String paragraph : paragraphs) {
-            newStr += paragraph;
+            sortedString += paragraph;
         }
         System.out.println("Our Sorted string: ");
-        System.out.println(newStr);
+        System.out.println(sortedString);
     }
 }
