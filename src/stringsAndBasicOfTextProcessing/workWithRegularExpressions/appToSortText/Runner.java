@@ -1,4 +1,4 @@
-package stringsAndBasicOfTextProcessing.workWithRegularExpressions;
+package stringsAndBasicOfTextProcessing.workWithRegularExpressions.appToSortText;
 
 /* Создать приложение,разбирающее текст(текст храниться в строке)
 и позволяющее выполнять с текстом три различных операции: отсортировать
@@ -10,13 +10,13 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class appToSortText {
+public class Runner {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+        SortParagraphs st = new SortParagraphs();
         System.out.println("Your initial text: \n");
 
-        String anyString2 = "  The class String includes methods for examining individual characters of the sequence, for comparing strings, for searching strings," +
+        String anyString = "  The class String includes methods for examining individual characters of the sequence, for comparing strings, for searching strings," +
                 "for extracting substrings, and for creating a copy of a string with all characters" +
                 "\ntranslated to uppercase or to lowercase. Case mapping is based on the Unicode Standard version specified by the Character class." +
                 "\n  The Java language provides special support for the string concatenation operator ( + )," + "and for conversion of other objects to strings. " +
@@ -30,7 +30,7 @@ public class appToSortText {
                 "\n  The String class provides methods for dealing with Unicode code points (i.e., characters),"
                 + "in addition to those for dealing with Unicode code units (i.e., char values).";
 
-        System.out.println(anyString2);
+        System.out.println(anyString);
         System.out.println("\n**********************************************************\n");
 
         System.out.println("What do you want to do with this text? " +
@@ -40,23 +40,15 @@ public class appToSortText {
                 "given character.");
         System.out.println("Enter the position index: ");
         String answer = reader.readLine();
-        if(answer.equals("1")){
-String[]paragraphs = anyString2.split("[.]");
-for( String temp: paragraphs){
-    System.out.println(temp);
-}
+        if (answer.equals("1")) {
+            st.sortParByNumberOfSentence(anyString);
 
-        }else if(answer.equals("2")){
+        } else if (answer.equals("2")) {
 
-        }else if(answer.equals("3")){
+        } else if (answer.equals("3")) {
 
-        }else{
+        } else {
             System.out.println("Your entered wrong position. Try again.");
         }
-
     }
-
-
-
-
 }
