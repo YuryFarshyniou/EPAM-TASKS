@@ -11,23 +11,26 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Runner {
+    static String answerParagraphs;
+
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        SortParagraphs st = new SortParagraphs();
-        System.out.println("Your initial text: \n");
+        SortParagraphsDesc st = new SortParagraphsDesc();
+        SortWordsInEachSentenceByLength sb = new SortWordsInEachSentenceByLength();
+        System.out.print("Your initial text: ");
 
-        String anyString = "  The class String includes methods for examining individual characters of the sequence, for comparing strings, for searching strings," +
+        String anyString = "\n  The class String includes methods for examining individual characters of the sequence, for comparing strings, for searching strings," +
                 "for extracting substrings, and for creating a copy of a string with all characters" +
-                "\ntranslated to uppercase or to lowercase. Case mapping is based on the Unicode Standard version specified by the Character class." +
-                "\n  The Java language provides special support for the string concatenation operator ( + )," + "and for conversion of other objects to strings. " +
+                "\ntranslated to uppercase or to lowercase. Case mapping is based on the Unicode Standard version specified by the Character class.\n" +
+                "  The Java language provides special support for the string concatenation operator ( + )," + "and for conversion of other objects to strings. " +
                 "String concatenation is implemented through the StringBuilder(or StringBuffer) class and" +
                 "\nits append method. String conversions are implemented through the method toString,defined by Object and inherited by all classes in Java." +
-                "For additional information on string concatenation and conversion," + "\nsee Gosling, Joy, and Steele, The Java Language Specification." +
-                "\n  Unless otherwise. noted, passing a null argument. to a constructor or method in this class will cause a NullPointerException to be thrown."
-                + "\n  A String represents a string in the UTF-16 format in which supplementary characters" +
+                "For additional information on string concatenation and conversion," + "\nsee Gosling, Joy, and Steele, The Java Language Specification.\n" +
+                "  Unless otherwise noted, passing a null argument to a constructor or method in this class will cause a NullPointerException to be thrown.\n"
+                + "  A String represents a string in the UTF-16 format in which supplementary characters" +
                 "are represented by surrogate pairs (see the section Unicode Character Representations in the Character class for more information)." +
-                "\nIndex values refer to char code units," + "so a supplementary character uses two positions in a String." +
-                "\n  The String class provides methods for dealing with Unicode code points (i.e., characters),"
+                "\nIndex values refer to char code units," + "so a supplementary character uses two positions in a String.\n" +
+                "  The String class provides methods for dealing with Unicode code points (i.e., characters),"
                 + "in addition to those for dealing with Unicode code units (i.e., char values).";
 
         System.out.println(anyString);
@@ -38,17 +41,36 @@ public class Runner {
                 "\n2.Sort words in each sentence by length." +
                 "\n3.Sort lexemes in a sentence in descending order by the number of occurrences " +
                 "given character.");
+
+        System.out.println("\n**********************************************************\n");
         System.out.println("Enter the position index: ");
         String answer = reader.readLine();
-        if (answer.equals("1")) {
-            st.sortParByNumberOfSentence(anyString);
 
-        } else if (answer.equals("2")) {
+        switch (answer) {
+            case "1":
+                System.out.println("Do you want sort in ascending or descending order?(a/d)");
+                answerParagraphs = reader.readLine();
+                if (answerParagraphs.equals("a")) {
+                    st.sortParByNumberOfSentence(anyString);
 
-        } else if (answer.equals("3")) {
+                } else if (answerParagraphs.equals("d")) {
+                    st.sortParByNumberOfSentence(anyString);
 
-        } else {
-            System.out.println("Your entered wrong position. Try again.");
+                } else {
+                    System.out.println("You wrote wrong index. Try again.");
+                }
+
+                break;
+            case "2":
+
+                sb.sortWords(anyString);
+                break;
+            case "3":
+
+                break;
+            default:
+                System.out.println("Your entered wrong position. Try again.");
+                break;
         }
     }
 }
