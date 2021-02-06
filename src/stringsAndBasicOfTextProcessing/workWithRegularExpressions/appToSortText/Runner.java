@@ -12,11 +12,15 @@ import java.io.InputStreamReader;
 
 public class Runner {
     static String answerParagraphs;
-
+    static String answerSentences;
+    static String answerLexemes;
+    static String answerAlphabet;
+    static String charact;
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         SortParagraphsDesc st = new SortParagraphsDesc();
         SortWordsInEachSentenceByLength sb = new SortWordsInEachSentenceByLength();
+        SortLexemesInaSentence sls = new SortLexemesInaSentence();
         System.out.print("Your initial text: ");
 
         String anyString = "\n  The class String includes methods for examining individual characters of the sequence, for comparing strings, for searching strings," +
@@ -47,9 +51,11 @@ public class Runner {
         String answer = reader.readLine();
 
         switch (answer) {
+
             case "1":
                 System.out.println("Do you want sort in ascending or descending order?(a/d)");
                 answerParagraphs = reader.readLine();
+
                 if (answerParagraphs.equals("a")) {
                     st.sortParByNumberOfSentence(anyString);
 
@@ -61,13 +67,57 @@ public class Runner {
                 }
 
                 break;
+
+
             case "2":
 
-                sb.sortWords(anyString);
+                System.out.println("Do you want sort sentences in ascending or descending order?(a/d)");
+                answerSentences = reader.readLine();
+
+                if (answerSentences.equals("a")) {
+
+                    sb.sortWords(anyString);
+
+                } else if (answerSentences.equals("d")) {
+                    sb.sortWords(anyString);
+                } else {
+                    System.out.println("You wrote wrong index. Try again.");
+                }
                 break;
+
+
             case "3":
 
+                System.out.println("Do you want sort lexemes in a sentence in Alphabet sort or " +
+                        "sort lexemes in a sentence in descending order by the number of occurrences?(al/n)");
+                answerLexemes = reader.readLine();
+
+                if(answerLexemes.equals("al")){
+                    System.out.println("Do you want sort in ascending or descending order?(a/d)");
+                    answerAlphabet = reader.readLine();
+
+                    if (answerAlphabet.equals("a")) {
+                        sls.sortLexemes(anyString,charact);
+
+                    } else if (answerAlphabet.equals("d")) {
+                        sls.sortLexemes(anyString,charact);
+
+                    } else {
+                        System.out.println("You wrote wrong index. Try again.");
+                    }
+                    sls.sortLexemes(anyString,charact);
+
+                }else if(answerLexemes.equals("n")){
+
+                    System.out.println("Enter your character: ");
+                    charact = reader.readLine();
+                    sls.sortLexemes(anyString,charact);
+
+                }else{
+                    System.out.println("You wrote wrong index. Try again.");
+                }
                 break;
+
             default:
                 System.out.println("Your entered wrong position. Try again.");
                 break;

@@ -6,7 +6,9 @@ import java.util.regex.Pattern;
 
 public class SortWordsInEachSentenceByLength {
 
+
     void sortWords(String anyString) {
+        ArrayList sortedSentences = new ArrayList<>();
 
         // Ищем конец предложений в строке.
 
@@ -30,21 +32,72 @@ public class SortWordsInEachSentenceByLength {
                 sentence.add(String.copyValueOf(arr, sentenceIndex.get(i - 1), length));
             }
         }
+        if (Runner.answerSentences.equals("a")) {
+            sortedSentences = sortSentencesAscending(sentence);
 
-
-        for (int i = 0; i < sentence.size(); i++) {
-            System.out.println("The sentence number" + i + " is : " + sentence.get(i));
+        } else if (Runner.answerSentences.equals("d")) {
+            sortedSentences = sortSentencesDescending(sentence);
         }
 
-        // Сортируем предложения.
+        // Выводим список.
 
+        System.out.println("Our sorted string: ");
+
+        for (int i = 0; i < sortedSentences.size(); i++) {
+
+            System.out.println("Our " + (i + 1) + " sentence is: " + sortedSentences.get(i));
+        }
+    }
+
+    // Сортируем предложения в возрастающем порядке.
+
+    static ArrayList sortSentencesAscending(ArrayList<String> sentence) {
         String regex2 = "\\w+\\b";
-        pattern = Pattern.compile(regex2);
+        Pattern pattern = Pattern.compile(regex2);
 
         ArrayList<String> sortedSentences = new ArrayList<>();
         for (int i = 0; i < sentence.size(); i++) {
             ArrayList<String> sorted = new ArrayList<>();
-            matcher = pattern.matcher(sentence.get(i));
+            Matcher matcher = pattern.matcher(sentence.get(i));
+            while (matcher.find()) {
+                sorted.add(matcher.group());
+                if (sorted.size() > 1) {
+                    for (int j = sorted.size() - 1; j > 0; j--) {
+                        if (sorted.get(j).length() < sorted.get(j - 1).length()) {
+                            String temp = sorted.get(j - 1);
+                            sorted.set(j - 1, sorted.get(j));
+                            sorted.set(j, temp);
+                        }
+                    }
+                }
+            }
+
+            // Передаем отсортированные предложения в список.
+
+            StringBuilder str = new StringBuilder();
+            for (int q = 0; q < sorted.size(); q++) {
+                if (q == sorted.size() - 1) {
+                    str.append(sorted.get(q)).append(" . ");
+                } else {
+                    str.append(sorted.get(q)).append(" , ");
+                }
+            }
+            sortedSentences.add(str.toString());
+        }
+
+        return sortedSentences;
+    }
+
+    // Сортируем предложения в убывающем порядке.
+
+    static ArrayList sortSentencesDescending(ArrayList<String> sentence) {
+        String regex2 = "\\w+\\b";
+        Pattern pattern = Pattern.compile(regex2);
+
+        ArrayList<String> sortedSentences = new ArrayList<>();
+        for (int i = 0; i < sentence.size(); i++) {
+            ArrayList<String> sorted = new ArrayList<>();
+            Matcher matcher = pattern.matcher(sentence.get(i));
             while (matcher.find()) {
                 sorted.add(matcher.group());
                 if (sorted.size() > 1) {
@@ -57,19 +110,20 @@ public class SortWordsInEachSentenceByLength {
                     }
                 }
             }
+
+            // Передаем отсортированные предложения в список.
+
             StringBuilder str = new StringBuilder();
-            for (String s : sorted) {
-                str.append(s);
+            for (int q = 0; q < sorted.size(); q++) {
+                if (q == sorted.size() - 1) {
+                    str.append(sorted.get(q)).append(" . ");
+                } else {
+                    str.append(sorted.get(q)).append(" , ");
+                }
             }
             sortedSentences.add(str.toString());
-
-
-        }
-        System.out.println("Our sorted string: ");
-//        StringBuilder stringBuilder = new StringBuilder("");
-        for (String s : sortedSentences) {
-            System.out.println(s);
         }
 
+        return sortedSentences;
     }
 }
