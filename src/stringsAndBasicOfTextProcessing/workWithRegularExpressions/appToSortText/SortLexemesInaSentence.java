@@ -11,7 +11,7 @@ public class SortLexemesInaSentence {
 
         // Ищем конец предложений в строке.
 
-        String regex = "\\w{2,}.\\.";
+        String regex = "\\w{2,}.[.?!]";
         char[] arr = anyString.toCharArray();
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(anyString);
@@ -36,27 +36,32 @@ public class SortLexemesInaSentence {
 
         if (Runner.answerLexemes.equals("n")) {
 
-            sortedSentences = sortLexemes(charact, sentence);
+            sortedSentences = sortLex(charact, sentence);
         } else if (Runner.answerLexemes.equals("al")) {
             sortedSentences = alphabetSort(sentence);
         }
 
 
         for (int r = 0; r < sortedSentences.size(); r++) {
-            System.out.println("Our " + (r + 1) + " sentence is: " + sortedSentences.get(r));
+            if (sortedSentences.get(r).isEmpty()) {
+                System.out.println("This character is undefined in " + (r + 1) + " sentence.");
+
+            } else {
+                System.out.println("Our " + (r + 1) + " sentence is: " + sortedSentences.get(r));
+            }
         }
 
     }
 
     // Сортируем лексемы по количеству вхождений символа.
 
-    static ArrayList sortLexemes(String charact, ArrayList<String> sentence) {
+    static ArrayList sortLex(String charact, ArrayList<String> sentence) {
 
         // Ищем количество лексем с вхождениями
 
         ArrayList<String> sortedSentences = new ArrayList<>();
 
-        String searchingLexemes = "\\w*" + "[" + charact + charact.toUpperCase() + "]" + "\\w*";
+        String searchingLexemes = "\\w*" + "[" + charact.toLowerCase() + charact.toUpperCase() + "]" + "\\w*";
         Pattern pattern1 = Pattern.compile(searchingLexemes);
 
 
@@ -110,6 +115,7 @@ public class SortLexemesInaSentence {
         return sortedSentences;
     }
 
+
     // Сортируем в алфавитном порядке.
 
     static ArrayList alphabetSort(ArrayList<String> sentence) {
@@ -123,7 +129,7 @@ public class SortLexemesInaSentence {
             ArrayList<String> sortSentence = new ArrayList<>();
             while (matcher.find()) {
                 int ch = matcher.group().toLowerCase().charAt(0);
-                if(ch<97){
+                if (ch < 97) {
                     continue;
                 }
                 charIndex.add(ch);
@@ -132,10 +138,10 @@ public class SortLexemesInaSentence {
                 //Сортировка по возрастанию.
 
                 if (charIndex.size() > 1) {
-                    if(Runner.answerAlphabet.equals("a")){
-                        ascendingSortAlphabet(sortSentence,charIndex);
-                    }else if(Runner.answerAlphabet.equals("d")){
-                        descendingSortAlphabet(sortSentence,charIndex);
+                    if (Runner.answerAlphabet.equals("a")) {
+                        ascendingSortAlphabet(sortSentence, charIndex);
+                    } else if (Runner.answerAlphabet.equals("d")) {
+                        descendingSortAlphabet(sortSentence, charIndex);
                     }
                 }
             }
@@ -153,32 +159,32 @@ public class SortLexemesInaSentence {
 
     // Сортировка в возврастающем порядке.
 
-    static void ascendingSortAlphabet(ArrayList<String>sortSentence, ArrayList<Integer>charIndex){
-        for (int j = charIndex.size()-1; j > 0; j--) {
+    static void ascendingSortAlphabet(ArrayList<String> sortSentence, ArrayList<Integer> charIndex) {
+        for (int j = charIndex.size() - 1; j > 0; j--) {
             if (charIndex.get(j) < charIndex.get(j - 1)) {
-                int temp = charIndex.get(j-1);
-                charIndex.set(j-1,charIndex.get(j));
-                charIndex.set(j,temp);
+                int temp = charIndex.get(j - 1);
+                charIndex.set(j - 1, charIndex.get(j));
+                charIndex.set(j, temp);
 
-                String tempStr = sortSentence.get(j-1);
-                sortSentence.set(j-1,sortSentence.get(j));
-                sortSentence.set(j,tempStr);
+                String tempStr = sortSentence.get(j - 1);
+                sortSentence.set(j - 1, sortSentence.get(j));
+                sortSentence.set(j, tempStr);
             }
         }
     }
 
     // Сортировка в убывающем порядке.
 
-    static void descendingSortAlphabet(ArrayList<String>sortSentence, ArrayList<Integer>charIndex){
-        for (int j = charIndex.size()-1; j > 0; j--) {
+    static void descendingSortAlphabet(ArrayList<String> sortSentence, ArrayList<Integer> charIndex) {
+        for (int j = charIndex.size() - 1; j > 0; j--) {
             if (charIndex.get(j) > charIndex.get(j - 1)) {
-                int temp = charIndex.get(j-1);
-                charIndex.set(j-1,charIndex.get(j));
-                charIndex.set(j,temp);
+                int temp = charIndex.get(j - 1);
+                charIndex.set(j - 1, charIndex.get(j));
+                charIndex.set(j, temp);
 
-                String tempStr = sortSentence.get(j-1);
-                sortSentence.set(j-1,sortSentence.get(j));
-                sortSentence.set(j,tempStr);
+                String tempStr = sortSentence.get(j - 1);
+                sortSentence.set(j - 1, sortSentence.get(j));
+                sortSentence.set(j, tempStr);
             }
         }
     }

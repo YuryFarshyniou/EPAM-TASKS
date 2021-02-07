@@ -16,6 +16,7 @@ public class Runner {
     static String answerLexemes;
     static String answerAlphabet;
     static String charact;
+
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         SortParagraphsDesc st = new SortParagraphsDesc();
@@ -92,28 +93,27 @@ public class Runner {
                         "sort lexemes in a sentence in descending order by the number of occurrences?(al/n)");
                 answerLexemes = reader.readLine();
 
-                if(answerLexemes.equals("al")){
+                if (answerLexemes.equals("al")) {
                     System.out.println("Do you want sort in ascending or descending order?(a/d)");
                     answerAlphabet = reader.readLine();
 
                     if (answerAlphabet.equals("a")) {
-                        sls.sortLexemes(anyString,charact);
+                        sls.sortLexemes(anyString, charact);
 
                     } else if (answerAlphabet.equals("d")) {
-                        sls.sortLexemes(anyString,charact);
+                        sls.sortLexemes(anyString, charact);
 
                     } else {
                         System.out.println("You wrote wrong index. Try again.");
                     }
-                    sls.sortLexemes(anyString,charact);
 
-                }else if(answerLexemes.equals("n")){
+                } else if (answerLexemes.equals("n")) {
 
                     System.out.println("Enter your character: ");
                     charact = reader.readLine();
-                    sls.sortLexemes(anyString,charact);
+                    sls.sortLexemes(anyString, charact);
 
-                }else{
+                } else {
                     System.out.println("You wrote wrong index. Try again.");
                 }
                 break;
