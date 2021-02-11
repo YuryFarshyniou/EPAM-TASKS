@@ -22,26 +22,29 @@ public class CustomersRunner {
         if (answer.equals("a")) {
             System.out.println("Do you want sort in ascending or descending order?(a//d)");
             String answerSort = reader.readLine();
-            if(answerSort.equals("a")){
+            if (answerSort.equals("a")) {
                 l.alphabeticSort(l.customers);
                 System.out.println("Customers sorted in ascending order: ");
                 l.show(l.customers);
-            }else if( answerSort.equals("d")){
+            } else if (answerSort.equals("d")) {
                 l.alphabeticSort(l.customers);
                 Collections.reverse(l.customers);
                 System.out.println("Customers sorted  in descending order: ");
                 l.show(l.customers);
-            }else{
+            } else {
                 System.out.println("You chose wrong option.");
             }
 
             // Сортируем по интервалу карт.
 
-        }
-//        else if (answer.equals("i")) {
-//
-//        }else{
-//            System.out.println("You chose wrong option.Try again.");
-//        }
+        } else if (answer.equals("i")) {
+            System.out.println("Enter min interval:");
+            long min = Long.parseLong(reader.readLine());
+            System.out.println("Enter max interval: ");
+            long max = Long.parseLong(reader.readLine());
+            l.customersIntervalCards(min, max);
+        } else {
+            System.out.println("You chose wrong option.Try again.");
         }
     }
+}

@@ -4,8 +4,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Comparator;
 
-public class CustomersList {
+public class CustomersList implements Comparator<Customer> {
     ArrayList<Customer> customers = new ArrayList<>();
 
     // Добавляем клиента.
@@ -30,10 +31,23 @@ public class CustomersList {
 
     // Сортируем пофамильно по алфавиту.
 
-    void alphabeticSort(ArrayList<Customer>customers){
-        LastNameCompare l = new LastNameCompare();
-        customers.sort(l);
+    void alphabeticSort(ArrayList<Customer> customers) {
+        customers.sort(this);
     }
 
+    // Переопределение метода compare интерфейса Comparator
 
+    public int compare(Customer one, Customer two) {
+        return one.getLastName().compareTo(two.getLastName());
+    }
+
+    // Выводим покупателей по интервалу карт.
+
+    void customersIntervalCards(long minInterval, long maxInterval) {
+        for (Customer customer : customers) {
+            if (customer.getCreditCardNumber() > minInterval && customer.getCreditCardNumber() < maxInterval) {
+                System.out.println(customer);
+            }
+        }
+    }
 }
