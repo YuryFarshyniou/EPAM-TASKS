@@ -1,10 +1,6 @@
-package programming_with_classes.simplest_classes_and_objects.classes_5.entity;
-
-
+package programming_with_classes.simplest_classes_and_objects.classes_5.by.yurachel.classes_5.entity;
 
 public class Counter {
-
-
     private int minRange;
     private int maxRange;
     private int count;

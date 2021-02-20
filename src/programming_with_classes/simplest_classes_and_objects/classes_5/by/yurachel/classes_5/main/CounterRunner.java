@@ -1,6 +1,6 @@
-package programming_with_classes.simplest_classes_and_objects.classes_5.main;
+package programming_with_classes.simplest_classes_and_objects.classes_5.by.yurachel.classes_5.main;
 
-import programming_with_classes.simplest_classes_and_objects.classes_5.entity.Counter;
+import programming_with_classes.simplest_classes_and_objects.classes_5.by.yurachel.classes_5.entity.Counter;
 
 public class CounterRunner {
     public static void main(String[] args) {

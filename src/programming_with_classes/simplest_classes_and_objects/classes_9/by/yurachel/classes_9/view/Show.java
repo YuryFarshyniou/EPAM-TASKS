@@ -1,17 +1,15 @@
-package programming_with_classes.simplest_classes_and_objects.classes_9;
+package programming_with_classes.simplest_classes_and_objects.classes_9.by.yurachel.classes_9.view;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+import programming_with_classes.simplest_classes_and_objects.classes_9.by.yurachel.classes_9.entity.Book;
 
-public class BookList {
-    ArrayList<Book> bookList = new ArrayList<>();
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+import java.util.List;
+
+public class Show {
 
     // Список книг.
 
-    void showBooks(ArrayList<Book> bookList) {
+    public void showBooks(List<Book> bookList) {
+        System.out.println("Our library: ");
         for (Book book : bookList) {
             System.out.println(book);
         }
@@ -19,9 +17,8 @@ public class BookList {
 
     // Выводим список книг заданного автора.
 
-    void authorBooks(ArrayList<Book> bookList) throws IOException {
-        System.out.println("Enter the author's name: ");
-        String name = reader.readLine();
+    public void authorBooks(List<Book> bookList, String name) {
+        System.out.println(name + " books: ");
         for (Book book : bookList) {
             for (int i = 0; i < book.getAuthor().length; i++) {
                 if (name.equalsIgnoreCase(book.getAuthor()[i])) {
@@ -33,27 +30,22 @@ public class BookList {
 
     // Выводим список книг, выпущенных заданным издательством.
 
-    void publishingHouseBooks(ArrayList<Book> bookList) throws IOException {
-        System.out.println("Enter the publishing house's name: ");
-        String publishingHouseName = reader.readLine();
+    public void publishingHouseBooks(List<Book> bookList, String publishingHouseName) {
+        System.out.println(publishingHouseName + " was the publishing house for these books: ");
         for (Book book : bookList) {
             if (publishingHouseName.equalsIgnoreCase(book.getPublishingHouse())) {
                 System.out.println(book.getBookTitle());
             }
         }
     }
-
     // Выводим список книг, выпущенных после заданного года.
 
-    void booksAfterSpecificYear(ArrayList<Book> bookList) throws IOException {
-        System.out.println("Enter a specific year: ");
-        int year = Integer.parseInt(reader.readLine());
+    public void booksAfterSpecificYear(List<Book> bookList, int year) {
+        System.out.println("These books was published after " + year + " year: ");
         for (Book book : bookList) {
             if (book.getPublishingYear() > year) {
                 System.out.println(book.getBookTitle());
             }
         }
     }
-
-
 }
