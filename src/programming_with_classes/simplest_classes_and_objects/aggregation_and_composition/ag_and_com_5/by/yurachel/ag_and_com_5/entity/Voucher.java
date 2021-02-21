@@ -1,4 +1,4 @@
-package programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.agAndCom_5;
+package programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.by.yurachel.ag_and_com_5.entity;
 
 public class Voucher {
     private String voucherType;
@@ -56,14 +56,10 @@ public class Voucher {
         this.price = price;
     }
 
-    @Override
+
     public String toString() {
-        return "Voucher{" +
-                "voucherType='" + voucherType + '\'' +
-                ", transport='" + transport + '\'' +
-                ", food='" + food + '\'' +
-                ", amountOfDay=" + amountOfDay +
-                ", price=" + price +
-                '}';
+        return "Voucher's information. " + "voucherType: " + voucherType +
+                ", transport: " + transport + ", food: " + food +
+                ", amountOfDay: " + amountOfDay + ", price: " + price;
     }
 }

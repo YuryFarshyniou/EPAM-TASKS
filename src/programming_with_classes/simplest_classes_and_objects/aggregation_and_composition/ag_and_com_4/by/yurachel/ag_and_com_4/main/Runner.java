@@ -51,7 +51,7 @@ public class Runner {
 
         // Блокировка счета.
 
-        bank.blockAccount(new BigInteger("123456789"));
-        System.out.println( bank.findingAccount(new BigInteger("123456789")).getAmountOfMoney());
+//        bank.blockAccount(new BigInteger("123456789"));
+//        System.out.println( bank.findingAccount(new BigInteger("123456789")).getAmountOfMoney());
     }
 }
