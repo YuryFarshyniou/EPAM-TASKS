@@ -1,11 +1,6 @@
 package programming_with_classes.simplest_classes_and_objects.classes_4.by.yurachel.task_4.entity;
 
-
-
-
 public class Train {
-
-    // Объявляем атрибуты класса.
 
     private String destination;
     private final int trainNumber;
