@@ -1,7 +1,6 @@
 package programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.by.yurachel.ag_and_com_5.main;
 
 import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.by.yurachel.ag_and_com_5.entity.TravelAgency;
-import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.by.yurachel.ag_and_com_5.entity.Voucher;
 
 import java.io.IOException;
 
@@ -33,7 +32,8 @@ public class Runner {
         list.addVoucher("Cruise", "Ship", "Yes", 5, 1199);
 
 
-        list.showVouchers();
-//        list.sort();
+//        list.showVouchers();
+
+        list.sort();
     }
 }

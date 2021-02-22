@@ -1,11 +1,8 @@
 package programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.by.yurachel.ag_and_com_5.entity;
 
-import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.comparators.AmountOfDaySort;
-import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.comparators.FoodSort;
-import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.comparators.PriceSort;
-import programming_with_classes.simplest_classes_and_objects.aggregation_and_composition.ag_and_com_5.comparators.TransportSort;
-
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +14,6 @@ public class TravelAgency {
         voucherList = new ArrayList<>();
         voucherRecommendationList = new ArrayList<>();
     }
-
-    TransportSort ts = new TransportSort();
-    FoodSort fs = new FoodSort();
-    AmountOfDaySort as = new AmountOfDaySort();
-    PriceSort ps = new PriceSort();
 
     public List<Voucher> getVoucherList() {
         return voucherList;
@@ -55,15 +47,17 @@ public class TravelAgency {
 
     // Ищем путевку мечты.
 
-    public void sort(String typeOfService) throws IOException {
+    public void sort() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Our agency can offer you next types of services: Rest, Excursion, Treatment, Cruise, Shopping.");
-
+        System.out.println("What do you want to choose?");
+        String answer = reader.readLine();
         boolean isExist = false;
 
         // Первоначальная сортировка.
 
         for (Voucher voucher : this.voucherList) {
-            if (typeOfService.equalsIgnoreCase(voucher.getVoucherType())) {
+            if (answer.equalsIgnoreCase(voucher.getVoucherType())) {
                 voucherRecommendationList.add(voucher);
                 isExist = true;
             }
@@ -72,7 +66,7 @@ public class TravelAgency {
             System.out.println("You chose wrong answer.Try again.");
             return;
         }
-        showVouchers();
+        showRecommendationVouchers();
 
         // Более детальная сортировка.
 
@@ -86,13 +80,13 @@ public class TravelAgency {
                 System.out.println("Do you want to sort by transport,food,days or price?");
                 String answer2 = reader.readLine();
                 if (answer2.equalsIgnoreCase("transport")) {
-                    this.voucherRecommendationList.sort(ts);
+                    this.voucherRecommendationList.sort((voucher1, voucher2) -> voucher1.getTransport().compareTo(voucher2.getTransport()));
                 } else if (answer2.equalsIgnoreCase("food")) {
-                    this.voucherRecommendationList.sort(fs);
+                    this.voucherRecommendationList.sort((voucher1, voucher2) -> voucher1.getFood().compareTo(voucher2.getFood()));
                 } else if (answer2.equalsIgnoreCase("days")) {
-                    this.voucherRecommendationList.sort(as);
+                    this.voucherRecommendationList.sort((voucher1, voucher2) -> voucher1.getAmountOfDay() - (voucher2.getAmountOfDay()));
                 } else if (answer2.equalsIgnoreCase("price")) {
-                    this.voucherRecommendationList.sort(ps);
+                    this.voucherRecommendationList.sort((voucher1, voucher2) -> voucher1.getPrice() - voucher2.getPrice());
                 } else {
                     System.out.println("Wrong option.Try again.");
                 }
@@ -106,15 +100,15 @@ public class TravelAgency {
                 System.out.println("Our congratulations! Good choice! Come again!");
                 return;
             }
-            showVouchers();
+            showRecommendationVouchers();
         }
     }
 
     // Выводим список путевок по интересам.
 
-//    public void showVouchers() {
-//        for (int i = 0; i < newVoucherList.size(); i++) {
-//            System.out.println((i + 1) + "  " + newVoucherList.get(i));
-//        }
-//    }
+    public void showRecommendationVouchers() {
+        for (int i = 0; i < voucherRecommendationList.size(); i++) {
+            System.out.println((i + 1) + "  " + voucherRecommendationList.get(i));
+        }
+    }
 }
