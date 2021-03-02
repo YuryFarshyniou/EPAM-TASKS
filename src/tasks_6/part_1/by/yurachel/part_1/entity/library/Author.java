@@ -1,6 +1,7 @@
 package tasks_6.part_1.by.yurachel.part_1.entity.library;
 
 public class Author {
+
     private String Name;
 
     public String getName() {

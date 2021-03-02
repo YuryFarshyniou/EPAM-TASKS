@@ -4,12 +4,25 @@ import java.util.List;
 import java.util.Objects;
 
 public class Book {
+    private int id;
     private final String bookName;
     private String type;
     private List<Author> authors;
     private final Genre genre;
     private int price;
     private final int numberOfPages;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<Author> getAuthors() {
+        return authors;
+    }
 
     public String getType() {
         return type;
@@ -43,7 +56,8 @@ public class Book {
         return numberOfPages;
     }
 
-    public Book(String bookName, String type, List<Author> authors, Genre genre, int price, int numberOfPages) {
+    public Book(int id, String bookName, String type, List<Author> authors, Genre genre, int price, int numberOfPages) {
+        this.id = id;
         this.bookName = bookName;
         this.type = type;
         this.authors = authors;
@@ -70,9 +84,8 @@ public class Book {
     public String toString() {
 
 
-        return "Book's information. " + "BookName: " + bookName + ". Authors: " + authors + ". "
+        return "Book's information. " + "id: " + id + " BookName: " + bookName + ", type: " + type + ". Authors: " + authors + ". "
                 + genre + ". Price: " + price + "$. NumberOfPages: " + numberOfPages;
-
 
     }
 }

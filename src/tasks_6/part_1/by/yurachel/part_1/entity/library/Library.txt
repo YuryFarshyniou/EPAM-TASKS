@@ -1,2 +1,10 @@
-Book's information. BookName: Horus. Authors: [Dan Abbnet]. Genre. Fantastic. Price: 100$. NumberOfPages: 350
-Book's information. BookName: Java. Authors: [Blinov I.N.]. Genre. Java tutorial. Price: 200$. NumberOfPages: 800
+Book's information. id: 1 BookName: Horus, type: paper. Authors: [Dan Abbnet]. Genre. Fantastic. Price: 100$. NumberOfPages: 350
+Book's information. id: 2 BookName: Java, type: electronic. Authors: [Blinov I.N.]. Genre. Java tutorial. Price: 200$. NumberOfPages: 800
+Book's information. id: 3 BookName: The Solar War , type: electronic. Authors: [Ben Counter ]. Genre. Fantastic. Price: 150$. NumberOfPages: 430
+Book's information. id: 4 BookName: Old Earth, type: paper. Authors: [Graham McNeill]. Genre. Fantastic. Price: 130$. NumberOfPages: 460
+Book's information. id: 5 BookName: Tallarn , type: electronic. Authors: [Gav Thorpe]. Genre. Fantastic. Price: 90$. NumberOfPages: 500
+Book's information. id: 6 BookName: Vengeful Spirit, type: paper. Authors: [Aaron Dembski-Bowden ]. Genre. Fantastic. Price: 150$. NumberOfPages: 410
+Book's information. id: 7 BookName: Know No Fear, type: electronic. Authors: [John French]. Genre. Fantastic. Price: 120$. NumberOfPages: 390
+Book's information. id: 8 BookName: Fallen Angels, type: paper. Authors: [ Guy Haley]. Genre. Fantastic. Price: 210$. NumberOfPages: 610
+Book's information. id: 9 BookName: Prince of Crows , type: electronic. Authors: [Rob Sanders ]. Genre. Fantastic. Price: 150$. NumberOfPages: 260
+Book's information. id: 10 BookName: Censure, type: paper. Authors: [Nick Kyme]. Genre. Fantastic. Price: 200$. NumberOfPages: 520
