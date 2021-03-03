@@ -25,6 +25,7 @@ public class Runner {
 
         Util util = new Util();
         Admin admin = new Admin();
+        admin.writeToLibrary(book10);
 
 
     }

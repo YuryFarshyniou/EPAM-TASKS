@@ -13,10 +13,9 @@ import java.util.regex.Pattern;
 
 public class Admin {
 
-    public static final String LIBRARY_PATH = "C:\\Users\\USER1\\IdeaProjects\\EPAM-TASKS\\src\\tasks_6" +
-            "\\part_1\\by\\yurachel\\part_1\\entity\\library\\Library.txt";
+    public static final String LIBRARY_PATH = "resources\\task_6\\library\\Library.txt";
 
-    private final String userAuthenticationPath = "C:\\Users\\USER1\\IdeaProjects\\EPAM-TASKS\\src\\tasks_6\\part_1\\by\\yurachel\\part_1\\entity\\roles\\UserAuthentication.txt";
+    private final String userAuthenticationPath = "resources\\task_6\\library\\UserAuthentication.txt";
 
     public final static String ADMIN_EMAIL = "yurachel@mail.ru";
 
@@ -52,7 +51,7 @@ public class Admin {
                         pas + ", Email. " + user.getEmail() + "\n");
             }
         } catch (IOException e) {
-            System.out.println("File not found");
+            System.err.println("File not found");
         }
 
         userList.addAll(Arrays.asList(users));
@@ -67,7 +66,7 @@ public class Admin {
                 findEmails(book1);
             }
         } catch (IOException e) {
-            System.out.println("File not found");
+            System.err.println("File not found.");
         }
     }
 
