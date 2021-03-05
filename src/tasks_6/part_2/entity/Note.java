@@ -1,7 +1,5 @@
 package tasks_6.part_2.entity;
 
-import java.util.Date;
-
 public class Note {
     private String topic;
     private String date;
@@ -49,7 +47,7 @@ public class Note {
 
     @Override
     public String toString() {
-        return "Topic: " + topic + "  Date: " + date + "  Email: " + email+ "  Message: " + message;
+        return "Topic: " + topic + "  Date: " + date + "  Email: " + email + "  Message: " + message;
     }
 }
 
